@@ -27,7 +27,7 @@ body p {
 }
 
 main {
-  max-width: 50%;
+  max-width: 55%;
 }
 
 main .card {
@@ -55,7 +55,7 @@ main .card .card-title {
 }
 
 main .card .description {
-  margin: 10px auto;
+  margin: 10px 30px;
 }
 
 main .card .subscription {
