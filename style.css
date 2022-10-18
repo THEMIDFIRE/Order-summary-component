@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  text-align: center;
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-color: #e0e8ff;
+  background-position: 0 -85%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  place-items: center;
+}
+
+body p {
+  font-size: 16px;
+  color: #7280a7;
+}
+
+main {
+  max-width: 50%;
+}
+
+main .card {
+  background-color: #f5f7ff;
+  margin: 25px auto;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .card .card-img {
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 30px;
+}
+
+main .card .card-title {
+  margin: 5px auto;
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+main .card .description {
+  margin: 10px auto;
+}
+
+main .card .subscription {
+  font-size: .8em;
+  width: 85%;
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  margin: 10px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 16px;
+}
+
+main .card .subscription .details {
+  text-align: left;
+  font-size: .9em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .card .subscription .details img {
+  width: 30%;
+  margin-right: 15px;
+}
+
+main .card .subscription .details .plan {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+main .card .subscription .details .price {
+  color: #7280a7;
+  font-weight: 500;
+}
+
+main .card .subscription a {
+  color: #3829e0;
+  font-weight: 700;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+main .card .subscription a:hover {
+  color: #756af1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+main .card button {
+  width: 85%;
+  border: none;
+  font-weight: 700;
+  margin: 10px auto;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+main .card button:hover {
+  cursor: pointer;
+}
+
+main .card .proceed {
+  background-color: #3829e0;
+  color: #f5f7ff;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px auto;
+  -webkit-box-shadow: 0 4px 20px -1px #756af1;
+          box-shadow: 0 4px 20px -1px #756af1;
+}
+
+main .card .proceed:hover {
+  background-color: #756af1;
+}
+
+main .card .cancel {
+  background-color: transparent;
+  color: #7280a7;
+  margin-bottom: 30px;
+}
+
+main .card .cancel:hover {
+  color: black;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=style.css.map */
