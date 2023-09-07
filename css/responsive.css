@@ -1,0 +1,109 @@
+@media only screen and (max-width: 768px) {
+  main section .container {
+    max-width: 80%;
+    flex-direction: column;
+  }
+  main #landing {
+    text-align: center;
+  }
+  main #landing .ld, main #landing .rt {
+    width: 100%;
+  }
+  main #landing .ld {
+    order: 2;
+  }
+  main #landing .ld .btns, main #landing .ld .social {
+    width: 100%;
+  }
+  main #about .container .lt, main #about .container .rd {
+    width: 90%;
+    margin: auto;
+  }
+  main #about .container .rd #info div {
+    width: initial;
+  }
+}
+@media only screen and (max-width: 620px) {
+  header {
+    position: relative;
+  }
+  header .brand {
+    width: 50%;
+    order: 1;
+  }
+  header label[for=menu] {
+    width: 25px;
+    height: 10px;
+    cursor: pointer;
+    align-items: center;
+    order: 3;
+    position: relative;
+  }
+  header label[for=menu] div {
+    width: 25px;
+    height: 2px;
+    background: #70869B;
+    border-radius: 2px;
+    position: absolute;
+    transition: 0.3s opacity linear 0.2s;
+  }
+  header label[for=menu] div:first-of-type {
+    -webkit-animation: line1r 0.65s cubic-bezier(0.68, 0.01, 0.13, 0.16) both;
+            animation: line1r 0.65s cubic-bezier(0.68, 0.01, 0.13, 0.16) both;
+  }
+  header label[for=menu] div:last-of-type {
+    -webkit-animation: line3r 0.65s cubic-bezier(0.68, 0.01, 0.13, 0.16) both;
+            animation: line3r 0.65s cubic-bezier(0.68, 0.01, 0.13, 0.16) both;
+  }
+  header input[type=checkbox] {
+    visibility: hidden;
+  }
+  header input[type=checkbox]:checked + label div:first-of-type {
+    -webkit-animation: line1 0.65s cubic-bezier(1, 0.82, 0.165, 1) both;
+            animation: line1 0.65s cubic-bezier(1, 0.82, 0.165, 1) both;
+  }
+  header input[type=checkbox]:checked + label div:nth-of-type(2) {
+    opacity: 0;
+  }
+  header input[type=checkbox]:checked + label div:last-of-type {
+    -webkit-animation: line3 0.65s cubic-bezier(1, 0.82, 0.165, 1) both;
+            animation: line3 0.65s cubic-bezier(1, 0.82, 0.165, 1) both;
+  }
+  header input[type=checkbox]:checked + label ~ nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    -webkit-animation: openNav 0.5s linear both;
+            animation: openNav 0.5s linear both;
+  }
+  header nav {
+    display: none;
+    order: 2;
+    margin: auto;
+    width: 100%;
+    transition: all 0.3s linear;
+  }
+  header nav .menu-items {
+    justify-content: center;
+  }
+  header nav .menu-items li {
+    margin: 10px;
+  }
+  .wider {
+    background: rgba(110, 80, 140, 0.5);
+  }
+  .wider nav {
+    background: rgba(110, 80, 140, 0.5);
+  }
+  .wider:hover {
+    background: rgba(110, 80, 140, 0.7);
+  }
+  .wider:hover nav {
+    background: rgba(110, 80, 140, 0.7);
+  }
+  main #landing .ld .btns, main #landing .ld .social {
+    width: 100%;
+  }
+}/*# sourceMappingURL=responsive.css.map */

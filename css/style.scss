@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
+
+@import "colors.scss";
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Aladin', cursive;
+    background: $bg;
+    color: $txt;
+    // letter-spacing: 1px;
+    li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: $accent;
+    }
+}
+
+// Start Navigation bar styling
+header {
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 20%;
+    font-size: 1.45em;
+    padding: 20px 50px;
+    z-index: 9;
+    transition: all .3s linear;
+    .brandName {
+        .name {
+            color: $primary;
+            text-transform: uppercase;
+            font-weight: 700;
+            padding: 10px 14px;
+            position: relative;
+            background: transparent;
+            transition: .5s linear;
+            &::before {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                width: 0;
+                height: 2px;
+                border-top: 2px solid transparent;
+                border-right: 2px solid transparent;
+                box-sizing: border-box;
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                right: 0;
+                width: 0;
+                height: 2px;
+                border-bottom: 2px solid transparent;
+                border-left: 2px solid transparent;
+                box-sizing: border-box;
+            }
+            &:hover {
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+                &::before {
+                    border-color: $primary;
+                    height: 100%;
+                    transition: .3s width linear, .3s height linear .4s;
+                    width: 100%;
+                }
+                &::after {
+                    border-color: $primary;
+                    height: 100%;
+                    transition: .3s width linear, .3s height linear .4s;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    #menu {
+        display: none;
+    }
+    nav {
+        .menu-items {
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            flex-wrap: wrap;
+            transition: all .3s linear;
+            .link {
+                color: $secondary;
+                margin-inline: 10px;
+                position: relative;
+                flex: 1 1 100%;
+                &::after {
+                    content: '';
+                    width: 0;
+                    height: 2px;
+                    background: $secondary;
+                    border-radius: 2px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    transition: .2s linear;
+                }
+                &:hover, &:focus {
+                    color: $txt;
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Changing Navigation bar style after scrolling
+.wider {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    font-size: 1.3em;
+    height: 10%;
+    background: rgba($color: $accent, $alpha: .5);
+    nav {
+        .link {
+            color: $txt;
+            &:hover {
+                color: transparent;
+                -webkit-text-stroke: 1.2px $txt;
+            }
+            
+        }
+    }
+    &:hover {
+        background: rgba($color: $accent, $alpha: .7);
+    }
+}
+// End Navigation bar styling
+
+// Start Main page styling
+main {
+    font-size: 1.45em;
+    section {
+        display: flex;
+        align-items: center;
+        min-height: 100dvh;
+        margin-bottom: 50px;
+        position: relative;
+        &:nth-child(even) {
+            background-color: rgba($color: $secondary, $alpha: .1);
+        }
+        .container {
+            max-width: 80%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: auto;
+            .title {
+                position: absolute;
+                // top: 50%;
+                // left: 50%;
+                transform: translate(-50%, -50%) scale(3.5) rotate(-20deg);
+                color: transparent;
+                -webkit-text-stroke: .22px $txt;
+                z-index: -1;
+            }
+        }
+    }
+    // Start Landing Page styling
+    #landing {
+        background: radial-gradient(circle farthest-side at 124% 50%, #004e92 0, #004e92 4%, #000428 77%, #000428 100%);
+        background-position: 50% 50%;
+        background-size: auto auto;
+        .ld {
+            width: 50%;
+            .btns, .social {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            .btns {
+                margin-block: 12px;
+                .btn {
+                    position: relative;
+                    color: $secondary;
+                    border: {
+                        width: 1px;
+                        style: solid;
+                        radius: 12px;
+                    };
+                    padding: 6px 14px;
+                    transition: .4s linear;
+                    &:hover {
+                        color: $txt;
+                    }
+                }
+                .contact {
+                    color: $primary;
+                    transition: all .4s linear;
+                    z-index: 1;
+                    &::after {
+                        content: '';
+                        width: 0;
+                        height: 100%;
+                        background: $primary;
+                        position: absolute;
+                        transition: all .4s ease-in-out;
+                        right: 0;
+                        top: 0;
+                        border-radius: 12px;
+                        z-index: -1;
+                    }
+                    &:hover {
+                        color: whitesmoke;
+                        &::after {
+                            right: auto;
+                            left: 0;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .social {
+                .icon {
+                    transform: rotate(-25deg) skew(25deg);
+                    transition: .4s ease-in-out;
+                    &:hover {
+                        transform: rotate(0) skew(0);
+                    }
+                    .brand {
+                        transition: all .4s ease-in-out;
+                    }
+                }
+                .fa-github {
+                    color: $brand;
+                    &:hover {
+                        color: $githover;
+                    }
+                }
+                .fa-linkedin {
+                    color: $brand;
+                    &:hover {
+                        color: $inhover;
+                    }
+                }
+                .fa-twitter {
+                    color: $brand;
+                    &:hover {
+                        color: $twhover;
+                    }
+                }
+                .fa-facebook {
+                    color: $brand;
+                    &:hover {
+                        color: $fbhover;
+                    }
+                }
+                .fa-instagram {
+                    color: $brand;
+                    padding: 1px 2px;
+                    border-radius: 6px;
+                    &:hover {
+                        color: white;
+                        background: $ighover;
+                    }
+                }
+            }
+        }
+        .rt {
+            width: 50%;
+            img {
+                width: 80%;
+                background-image: url(../imgs/blob-haikei.png);
+                background-repeat: no-repeat;
+                background-size: 160%;
+                background-position: 42% 130%;
+                border-end-end-radius: 54% 50%;
+                border-end-start-radius: 33% 24%;
+            }
+        }
+    }
+    // End Landing Page styling
+    // Start About me styling
+    #about {
+        text-align: justify;
+        .container {
+            min-height: 80dvh;
+            padding: 3%;
+            background: rgba($color: $secondary, $alpha: .18);
+            backdrop-filter: blur(2px);
+            border: {
+                width: 1px;
+                style: solid;
+                color: #ffffff20;
+                radius: 12px;
+            }
+            .title {
+                top: 50%;
+                right: 20%;
+            }
+            .lt, .rd {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+            }
+            .lt {
+                div {
+                    width: 75%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    z-index: 0;
+                    overflow: hidden;
+                    padding: 4px;
+                    border-radius: 10px;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 150%;
+                        height: 150%;
+                        border-radius: 10px;
+                        z-index: -1;
+                        background-repeat: no-repeat;
+                        background-size: 50% 50%, 50% 50%;
+                        background-position: 0 0, 100% 0, 100% 100%;
+                        background-image: linear-gradient($primary, $primary),
+                        linear-gradient(transparent, transparent),
+                        linear-gradient($txt, $txt);
+                        animation: border 4s linear infinite;
+                    }
+                    img {
+                        width: 100%;
+                        border-radius: 10px;
+                    }
+                }
+            }
+            .rd {
+                flex-wrap: wrap;
+                .description {
+                    margin: revert;
+                }
+                #info {
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    margin-block: 30px;
+                    div {
+                        display: flex;
+                        margin-block: 5px;
+                        flex-wrap: wrap;
+                        h4 {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                #skills {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    margin-block: 26px;
+                    .fa-html5, .fa-css3, .fa-js, .fa-bootstrap, .fa-sass {
+                        transition: all .3s linear;
+                    }
+                    .fa-html5 {
+                        &:hover{
+                            color: $html;
+                        }
+                    }
+                    .fa-css3 {
+                        &:hover{
+                            color: $css;
+                        }
+                    }
+                    .fa-js {
+                        &:hover{
+                            color: $js;
+                        }
+                    }
+                    .fa-bootstrap {
+                        &:hover{
+                            color: $bs;
+                        }
+                    }
+                    .fa-sass {
+                        &:hover{
+                            color: $sass;
+                        }
+                    }
+                }
+                #helper {
+                    color: rgba($color: $secondary, $alpha: .5);
+                    font-size: .77rem;
+                    letter-spacing: 1.5px;
+                    display: flex;
+                    align-items: center;
+                    .fa-info {
+                        font-size: .49rem;
+                        margin-right: 5px;
+                        padding: 3px 6px;
+                        border: 2px solid;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+    // End About me styling
+}
+// End Main page styling
+// Start Scroll To Top button styling
+#stt {
+    .shown {
+        display: block;
+    }
+    a {
+        display: none;
+        transform: scale(1.3);
+        color: $primary;
+        background-color: rgba($color: $secondary, $alpha: .3);
+        position: fixed;
+        bottom: 10%;
+        right: 0;
+        padding: 3px 6px;
+        border-radius: 6px;
+        transition: display .3s ease-in-out;
+    }
+    
+}
+// End Scroll To Top button styling
+// Start Footer styling
+footer {
+    text-align: center;
+}
+// End Footer styling
