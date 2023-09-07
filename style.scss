@@ -16,6 +16,7 @@ $sub-bg: hsl(0, 0%, 95%);
 
 
 body {
+    min-height: 100vh;
     font-family: 'Red Hat Display', sans-serif;
     text-align: center;
     background-image: url(images/pattern-background-desktop.svg);

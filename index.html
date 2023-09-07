@@ -2,138 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="My name is Mohamed Magdy, I'm a front-end web developer and this is my portfolio that I made from scratch with pure CSS3 even though I know BootStrap but I wanted to do that so I can have more fun doing what I love the best">
-  <!-- Tab color for Mobile devices -->
-  <meta name="theme-color" content="#12130F">
-  <!-- Favicon icon -->
-  <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- responsive stylesheet -->
-  <link rel="stylesheet" href="css/responsive.css">
-  <!-- Animations -->
-  <link rel="stylesheet" href="css/animation.css">
-  <!-- Fontawesome icon pack -->
-  <script src="https://kit.fontawesome.com/c1bb2678a4.js" crossorigin="anonymous"></script>
-  <title>Mohamed Magdy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Order summary card</title>
+  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-  <header>
-    <div class="brandName">
-      <a href="#" class="name">Mohamed</a>
-    </div>
-    <input type="checkbox" id="menu">
-    <label for="menu">
-      <div id="line-1"></div>
-      <div id="line-2"></div>
-      <div id="line-3"></div> 
-    </label>
-    <nav>
-      <ul class="menu-items">
-        <li><a href="#about" class="link">About</a></li>
-        <li><a href="#services" class="link">Services</a></li>
-        <li><a href="#projects" class="link">Projects</a></li>
-        <li><a href="#contact" class="link">Get in touch</a></li>
-      </ul>
-    </nav>
-  </header>
   <main>
-    <section id="landing">
-      <div class="container">
-          <div class="ld">
-            <h3>Hello,</h3>
-            <h1>I&#39m <span>Mohamed Magdy,</span></h1>
-            <h2>Front-end web developer</h2>
-            <p>Freelancer based in Egypt</p>
-            <div class="btns">
-              <a href="#contact" class="contact btn">Get in touch</a>
-              <a href="#projects" class="projects btn">Projects</a>
-            </div>
-            <div class="social">
-              <a href="https://github.com/THEMIDFIRE" title="Github" class="icon"><i class="brand fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/themidfire" title="Linkedin" class="icon"><i class="brand fab fa-linkedin"></i></a>
-              <a href="https://twitter.com/THEMIDFIRE" title="Twitter" class="icon"><i class="brand fab fa-twitter"></i></a>
-              <a href="https://www.facebook.com/TH3MIDFIRE" title="Facebook" class="icon"><i class="brand fab fa-facebook"></i></a>
-              <a href="https://instagram.com/themidfire.dev" title="Instagram" class="icon"><i class="brand fab fa-instagram"></i></a>
-            </div>
-          </div>
-          <div class="rt">
-            <img src="imgs/me.png" alt="A picture of me just smiling" id="me">
-          </div>
-      </div>
-    </section>
-    <section id="about">
-      <div class="container">
-        <h3 class="title">About me</h3>
-        <div class="lt">
+    <div class="card">
+      <img src="images/illustration-hero.svg" alt="illustration-hero" class="card-img">
+      <h1 class="card-title">Order Summary</h1>
+      <p class="description">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+      <div class="subscription">
+        <div class="details">
+          <img src="images/icon-music.svg" alt="Music Icon" class="icon">
           <div>
-            <img src="imgs/mee.jpg" alt="Cool picture of me">
+            <h2 class="plan">Annual Plan</h2>
+            <h3 class="price">$59.99/year</h3>
           </div>
         </div>
-        <div class="rd">
-          <p class="description">I&#39m a Passionate, Self-taught front-end web developer who loves to code and have fun with the process with the continuous learning and improvemnt in this field</p>
-          <div id="info">
-            <div id="name">
-              <h4>Name</h4>
-              <p>Mohamed Magdy</p>
-            </div>
-            <div id="email">
-              <h4>Email</h4>
-              <p>2l6s2@example.com</p>
-            </div>
-            <div id="phone">
-              <h4>Phone</h4>
-              <p>(+20)1030356638</p>
-            </div>
-            <div id="address">
-              <h4>Address</h4>
-              <p>Egypt, Giza</p>
-            </div>
-          </div>
-          <div id="skills">
-            <i class="fa fa-html5 icon" title="HTML"></i>
-            <i class="fa fa-css3 icon" title="CSS"></i>
-            <i class="fab fa-js icon" title="JavaScript"></i>
-            <i class="fab fa-bootstrap icon" title="BootStrap"></i>
-            <i class="fab fa-sass icon" title="Sass"></i>
-          </div>
-          <div id="helper">
-            <i class="fa fa-info"></i>
-            <p id="help">Hover over the icons to know the names</p>
-          </div>
-        </div>
+        <a href="" class="change">Change</a>
       </div>
-    </section>
-    <section id="services">
-      <div class="container">
-        <h3 class="title">What I offer</h3>
-        <div class="content">
-          <div class="card">
-            
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="projects">
-      <div class="container">
-        <h3 class="title">Projects</h3>
-      </div>
-    </section>
-    <section id="contact">
-      <div class="container">
-        <h3 class="title">Contact Me</h3>
-      </div>
-    </section>
+      <button class="proceed">Proceed to Payment</button>
+      <button class="cancel">Cancel Order</button>
+    </div>
   </main>
-  <div id="stt">
-    <a href="#" id="scroll-to-top"><i class="fa fa-arrow-up"></i></a>
-  </div>
-  <footer>
-    <p>Made with ♥</p>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/THEMIDFIRE">THEMIDFIRE</a>.
   </footer>
-  <script src="js/jquery/jquery-3.6.0.min.js"></script>
-  <script src="js/script.js"></script>
 </body>
 </html>
